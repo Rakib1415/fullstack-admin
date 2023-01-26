@@ -1,5 +1,13 @@
 const router = require('express').Router();
-const { getProducts } = require('../controllers/client');
+const {
+    getProducts,
+    getCustomers,
+    getTransactions,
+    getGeography,
+} = require('../controllers/client');
 
 router.get('/products', getProducts);
+router.get('/customers', getCustomers);
+router.get('/transactions', getTransactions);
+router.get('/geography', getGeography);
 module.exports = router;
