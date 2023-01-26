@@ -1,10 +1,8 @@
 const router = require('express').Router();
-const { getAdmins } = require('../controllers/management');
+const { getAdmins, getUserPerformance } = require('../controllers/management');
 
 router.use('/admins', getAdmins);
 
-router.use('/performance/:id', (req, res) => {
-    res.status(200).json({ message: 'success' });
-});
+router.use('/performance/:id', getUserPerformance);
 
 module.exports = router;
